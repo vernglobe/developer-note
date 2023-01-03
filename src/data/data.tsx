@@ -15,6 +15,7 @@ import {
   AwsIcon,
   JestIcon,
 } from "../components/Icons";
+import { GitNote } from "../components/sections/GitNote";
 
 export const SIDEBAR_DATA = [
   {
@@ -28,6 +29,7 @@ export const SIDEBAR_DATA = [
     name: "GitHub/git",
     path: "/git",
     icon: <GitHubIcon />,
+    content: <GitNote />
   },
   {
     id: 3,

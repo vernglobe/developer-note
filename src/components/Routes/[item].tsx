@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
 import { ArrowBackIcon } from "../Icons";
+import ArrowForward from "@mui/icons-material/ArrowForward";
 
 const Item = (props: any) => {
-  const { page } = props;
+  const { page, content } = props;
   //console.log("here")
   //console.log({page})
+  console.log({content})
   if (page === "homepage") {
     return <div id="page">{page}
     </div>;
@@ -14,14 +16,13 @@ const Item = (props: any) => {
         <div id="page">
           <a href="/">
             <button className="btn">
-              <ArrowBackIcon /> Back to Home
+            Back to Home <ArrowForward />
             </button>
           </a>
           {page}
           
         </div>
-        <a href="#gitRepoAfter"> Upload local project to github</a>
-        <div id="gitRepoAfter">here my story goes</div>
+        {content}
       </>
     );
   }

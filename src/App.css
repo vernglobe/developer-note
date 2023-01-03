@@ -32,7 +32,7 @@ html {
   justify-content: center;
   background: transparent;
   outline: none;
-  border: 1px solid #808080;
+  border: 1px solid #808080 !important;
   border-radius: 3px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -44,10 +44,13 @@ html {
   -moz-transition: all 0.2s ease-in-out;
   -ms-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
+  position: absolute;
+  top: -3px !important;
+  right: 100px;
 }
 
 .btn:hover {
-  background-color: #e4e3e34d;
+  background-color: #e4e3e34d !important;
 }
 
 #page {
@@ -56,13 +59,14 @@ html {
   justify-content: center;
   text-align: center;
   text-transform: capitalize;
-  font-size: 1rem;
+  font-size: 2.5rem;
   overflow: hidden;
+  font-weight: 700;
 }
 
 @media screen and (min-width: 468px) {
   #page {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
   .btn {

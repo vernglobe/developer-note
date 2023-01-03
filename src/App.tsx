@@ -17,7 +17,7 @@ function App() {
               <Route 
                 key={index}
                 path={item.path}
-                element={<DynamicItem page={item.name} />} />
+                element={<DynamicItem page={item.name} content={item.content}/>} />
               </>
             ))}
         </Routes>
