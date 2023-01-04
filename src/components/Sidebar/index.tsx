@@ -14,14 +14,15 @@ import BrandLogo from "./BrandLogo.svg";
 import { SidebarItems } from "..";
 import { DevIcon, MenuCloseIcon, MenuOpenIcon } from "../Icons";
 
-const MOBILE_VIEW = window.innerWidth < 468;
+const MAX_MOBILE_WIDTH = 700;
+const MOBILE_VIEW = window.innerWidth <= MAX_MOBILE_WIDTH;
 
 export default function Sidebar({ children }:any) {
   const [displaySidebar, setDisplaySidebar] = useState(!MOBILE_VIEW);
 
   const handleSidebarDisplay = (e: any) => {
     e.preventDefault();
-    if (window.innerWidth > 468) {
+    if (window.innerWidth > MAX_MOBILE_WIDTH) {
       setDisplaySidebar(!displaySidebar);
     } else {
       setDisplaySidebar(false);

@@ -6,10 +6,8 @@
   outline: none;
   border: none;
   text-decoration: none !important;
-
-  font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  
+  font-family: "IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
 }
 
 html {
@@ -64,14 +62,29 @@ html {
   font-weight: 700;
 }
 
-@media screen and (min-width: 468px) {
+@media only screen and (max-width: 700px){
   #page {
-    font-size: 2.5rem;
+    font-size: 2rem;
+    display: flex !important;
   }
 
   .btn {
-    padding: 0.5rem 0.75rem;
-    gap: 0.5rem;
+    display: none !important;
+  }
+}
+
+@media only screen and (max-width: 1200px){
+  .btn {
+    right: 3px;
+  }
+
+  .page__title {
+    display: flex;
+  }
+
+  #page {
+    display: block;
+    padding-left: 3rem;
   }
 }
 

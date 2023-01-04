@@ -14,13 +14,12 @@ const Item = (props: any) => {
     return (
       <>
         <div id="page">
+          <span className="page__title">{page}</span>
           <a href="/">
             <button className="btn">
             Back to Home <ArrowForward />
             </button>
           </a>
-          {page}
-          
         </div>
         {content}
       </>

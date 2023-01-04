@@ -23,6 +23,7 @@ const SidebarItems = ({displaySidebar }: any) => {
             <ItemWrapper>
               {itemData.icon}
               <ItemName displaySidebar={displaySidebar}>
+                
                 {itemData.name}
               </ItemName>
             </ItemWrapper>
