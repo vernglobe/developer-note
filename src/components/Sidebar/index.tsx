@@ -12,9 +12,9 @@ import {
 import BrandLogo from "./BrandLogo.svg";
 
 import { SidebarItems } from "..";
-import { DevIcon, MenuCloseIcon, MenuOpenIcon } from "../Icons";
+import { DevIcon, MenuCloseIcon, MenuOpenIcon, MenuRoundedIcon } from "../Icons";
 
-const MAX_MOBILE_WIDTH = 700;
+const MAX_MOBILE_WIDTH = 468;
 const MOBILE_VIEW = window.innerWidth <= MAX_MOBILE_WIDTH;
 
 export default function Sidebar({ children }:any) {
@@ -34,19 +34,11 @@ export default function Sidebar({ children }:any) {
       <SidebarContainer id="dev-sidebar" displaySidebar={displaySidebar}>
         <SidebarWrapper>
           <SidebarLogoWrapper displaySidebar={displaySidebar}>
-            <SidebarLogo href="#">
-              <span className="app-brand-logo demo">
-                <DevIcon />
-              </span>
-              <SidebarBrand displaySidebar={displaySidebar} className="app__brand__text">
-                DevsNotes
-              </SidebarBrand>
-            </SidebarLogo>
             <SidebarToggler
               displaySidebar={displaySidebar}
               onClick={handleSidebarDisplay}
             >
-              {displaySidebar? <MenuCloseIcon />: <MenuOpenIcon />}
+              <MenuRoundedIcon/>
             </SidebarToggler>
           </SidebarLogoWrapper>
           <SidebarItems displaySidebar={displaySidebar} />

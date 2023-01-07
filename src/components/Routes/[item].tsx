@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowBackIcon } from "../Icons";
 import ArrowForward from "@mui/icons-material/ArrowForward";
+import { LabelUnderContruction, MSG_UNDER_CONSTRUCTION } from "../sections/Common";
 
 const Item = (props: any) => {
   const { page, content } = props;
@@ -8,8 +9,10 @@ const Item = (props: any) => {
   //console.log({page})
   console.log({content})
   if (page === "homepage") {
-    return <div id="page">{page}
-    </div>;
+    return (
+    <>
+      <LabelUnderContruction>{MSG_UNDER_CONSTRUCTION}</LabelUnderContruction>
+    </>);
   } else {
     return (
       <>

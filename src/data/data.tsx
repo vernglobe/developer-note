@@ -24,13 +24,6 @@ import { ReactJsNote } from "../components/sections/ReactJsNote";
 
 export const SIDEBAR_DATA = [
   {
-    id: 1,
-    name: "dashboards",
-    path: "/dashboards",
-    icon: <HomeIcon />,
-    content: <Dashboard />,
-  },
-  {
     id: 2,
     name: "GitHub/git",
     path: "/git",

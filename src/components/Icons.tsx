@@ -19,6 +19,7 @@ import MeetingRoomIcon from '@mui/icons-material/MeetingRoom';
 import NoMeetingRoomIcon from '@mui/icons-material/NoMeetingRoom';
 import HandymanTwoToneIcon from '@mui/icons-material/HandymanTwoTone';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
 
 export {
   HomeOutlinedIcon as HomeIcon,
@@ -42,4 +43,5 @@ export {
   NoMeetingRoomIcon as MenuCloseIcon,
   HandymanTwoToneIcon as DevIcon,
   ArrowForwardIcon,
+  MenuRoundedIcon,
 };

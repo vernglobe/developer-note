@@ -4,31 +4,38 @@ import styled from "styled-components";
 export const Children = styled.div<{displaySidebar: boolean}>`
   width: 100%;
   height: 100%;
-  margin-left: ${({ displaySidebar }) => (displaySidebar ? "15rem" : "5rem")};
+  margin-right: ${({ displaySidebar }) => (displaySidebar ? "15rem" : "5rem")};
 
   @media (max-width: 468px) {
-    margin-left: 5rem;
+    margin-right: 5rem;
   }
 `;
 
+// border-radius: top right bottom left
 export const SidebarWrapper = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
+  padding: 0.75rem 0rem 2rem 0rem;
   flex-direction: column;
+  border-radius: 20px 0px 0px 20px;
+  box-shadow: 5px 10px 20px #F3C3F8 inset;
   font-size: 0.9rem;
+  background-color: #F5DEF8;
 `;
 
 export const SidebarLogoWrapper = styled.div<{displaySidebar: boolean}>`
   padding: 0.5rem 0rem 0rem 0rem;
-  margin-bottom: 1rem;
-  display: flex;
-  justify-content: ${({ displaySidebar }) =>
-    displaySidebar ? "space-between" : "center"};
+  margin: 0rem 1rem;
+  display: inline;
+  right: 10px;
+  text-align: right;
+  justify-content: space-between;
   align-items: center;
+  border-radius: 20px;
 
   @media (max-width: 468px) {
-    justify-content: center;
+    
   }
 `;
 
@@ -48,10 +55,20 @@ export const SidebarBrand = styled.span<{displaySidebar: boolean}>`
 
 export const SidebarToggler = styled.button<{displaySidebar: boolean}>`
   cursor: pointer;
-  display: ${({ displaySidebar }) => (displaySidebar ? "block" : "none")};
+  border-radius: 10px;
+  padding:5px;
+  background: #CBBAFF;
+  color: #5e35b1 !important;
+  display: ${({ displaySidebar }) => (displaySidebar ? "inline-block" : "none")};
 
   @media (max-width: 468px) {
-    display: block;
+    display: none;
+  }
+
+  &:hover {
+    background: #5e35b1;
+    color: #ffffff !important;
+
   }
 `;
 
@@ -70,47 +87,53 @@ export const ItemContainer = styled.li`
   display: flex;
 
   &:hover {
-    background: #eaeced;
+    background: #E8A3DD;
+    box-shadow: 5px 10px 20px #BA83B1 inset;
+    color: #ffffff;
+    font-weight: bold;
   }
 
   &.active {
-    background-color: #dbe4f3;
   }
 `;
 
 export const ItemWrapper = styled.div`
   display: flex;
   align-items: center;
-  color: #7c7788;
+  color: #61445C;
+  padding-left: 20px;
+
+  &:hover {
+    color: #ffffff;
+  }
 `;
 
 export const ItemName = styled.span<{displaySidebar: boolean}>`
   margin-left: ${({ displaySidebar }) => (displaySidebar ? "0.5rem" : "0")};
   display: ${({ displaySidebar }) => (displaySidebar ? "block" : "none")};
   text-transform: capitalize;
+ 
+  @media (max-width: 468px) {
+    display: none;
+  }
 `;
 
 // Sidebar Container
+// padding: top right
 export const SidebarContainer = styled.div<{displaySidebar: boolean}>`
-  position: absolute;
-  left: 0;
+  padding: 6rem 0rem 0rem 0rem;
+  position: fixed;
+  right: 0;
   width: ${({ displaySidebar }) => (displaySidebar ? "15rem" : "5rem")};
-  height: 100vh;
-  padding: 0.75rem;
-  background: #f3f4f4;
   transition: width 350ms ease;
-  border-right: 1px solid #d4d8dd;
+  
   overflow-x: hidden;
-  ${({ displaySidebar }) =>
-    displaySidebar && "box-shadow: 8px 0px 12px 0px rgba(0,0,0,0.1)"};
 
   ${ItemWrapper} {
     justify-content: ${({ displaySidebar }) => !displaySidebar && "center"};
   }
 
   &:hover {
-    ${({ displaySidebar }) =>
-      !displaySidebar && "box-shadow: 8px 0px 12px 0px rgba(0,0,0,0.1)"};
 
     @media (min-width: 468px) {
       width: ${({ displaySidebar }) => !displaySidebar && "15rem"};
@@ -125,7 +148,7 @@ export const SidebarContainer = styled.div<{displaySidebar: boolean}>`
       }
 
       ${SidebarToggler} {
-        display: ${({ displaySidebar }) => !displaySidebar && "block"};
+        display: ${({ displaySidebar }) => !displaySidebar && "inline-block"};
       }
 
       ${ItemWrapper} {
