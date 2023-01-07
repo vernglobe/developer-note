@@ -18,11 +18,11 @@ const Item = (props: any) => {
       <>
         <div id="page">
           <span className="page__title">{page}</span>
-          <a href="/">
+          { /*<a href="/">
             <button className="btn">
             Back to Home <ArrowForward />
             </button>
-          </a>
+    </a>*/}
         </div>
         {content}
       </>
