@@ -16,7 +16,7 @@ export const SidebarWrapper = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
-  padding: 0.75rem 0rem 2rem 0rem;
+  padding: 0.75rem 0rem 0.75rem 0rem;
   flex-direction: column;
   border-radius: 20px 0px 0px 20px;
   box-shadow: 5px 10px 20px #F3C3F8 inset;

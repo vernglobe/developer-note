@@ -34,12 +34,12 @@ export default function Sidebar({ children }:any) {
       <SidebarContainer id="dev-sidebar" displaySidebar={displaySidebar}>
         <SidebarWrapper>
           <SidebarLogoWrapper displaySidebar={displaySidebar}>
-            <SidebarToggler
+            {/*<SidebarToggler
               displaySidebar={displaySidebar}
               onClick={handleSidebarDisplay}
             >
               <MenuRoundedIcon/>
-            </SidebarToggler>
+            </SidebarToggler>*/}
           </SidebarLogoWrapper>
           <SidebarItems displaySidebar={displaySidebar} />
         </SidebarWrapper>
